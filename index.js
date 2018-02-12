@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by artur on 11.02.2018.
  */
 var cityBase = new CityBase();
@@ -23,7 +23,7 @@ function inputCity(){
             document.getElementById("userCity").disabled=true;
             alert("Конец игры, вы проиграли");
             endGame("Компьютер выиграл");
-        },20000);
+        },120000);
     }
 }
 
