@@ -45,7 +45,8 @@ function User() {
 
     this.getLastLetter = function () {
         if (city.split("")[city.length - 1] === "ь" || city.split("")[city.length - 1] === "ъ" ||
-            city.split("")[city.length - 1] === "ы" || city.split("")[city.length - 1] === "й") {
+            city.split("")[city.length - 1] === "ы" || city.split("")[city.length - 1] === "й" ||
+            city.split("")[city.length - 1] === "ё") {
             if (city.split("")[city.length - 2] === "й")
                 return city.split("")[city.length - 3].toUpperCase();
             return city.split("")[city.length - 2].toUpperCase();
@@ -62,12 +63,12 @@ function User() {
             return false;
         }
         else {
-            debugger;
             if (!isNewCity(city))
                 alert("Город " + city + " уже был");
             else {
                 var rightCity = cityBase.findCity(city);
                 if (!rightCity) {
+                    debugger;
                     alert("Неправильно введен город");
                     return false;
                 }

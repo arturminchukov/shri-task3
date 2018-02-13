@@ -27,7 +27,8 @@ function Computer(){
         var city = document.getElementById("computerAnswer").value;
         if (city !== "") {
             if (city.split("")[city.length - 1] === "ь" || city.split("")[city.length - 1] === "ъ" ||
-                city.split("")[city.length - 1] === "ы" || city.split("")[city.length - 1] === "й") {
+                city.split("")[city.length - 1] === "ы" || city.split("")[city.length - 1] === "й" ||
+                city.split("")[city.length - 1] === "ё") {
                 if (city.split("")[city.length - 2] === "й")
                     return city.split("")[city.length - 3].toUpperCase();
                 return city.split("")[city.length - 2].toUpperCase();
@@ -43,7 +44,6 @@ function Computer(){
         var city = cityBase.getCity(lastLetter);
         if(city!==undefined) {
             document.getElementById("computerAnswer").value = city;
-            debugger;
             computer.addCity(city);
             geocode(city);
             return city;

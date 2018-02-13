@@ -14,7 +14,6 @@ function inputCity(){
     else{
         clearTimeout(timerId);
         geocode(city);
-        debugger;
         user.addCity(city);
         console.log("Ответ компьютера");
         computer.giveAnswer(user.getLastLetter());

@@ -21,9 +21,10 @@ function geocode(city) {
         function (res) {
             if(res.geoObjects.getLength()!==0) {
                 myMap.geoObjects.add(res.geoObjects);
+
             }
             else
-                alert("Ошибка, введите еще раз город");
+                console.log("Не могу найти город на карте");
         },
         function (err) {
             alert("Ошибка");
